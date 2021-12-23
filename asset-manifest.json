@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ouroscopo/static/css/main.cbc97862.css",
-    "main.js": "/ouroscopo/static/js/main.2a3521bc.js",
+    "main.css": "/ouroscopo/static/css/main.eb9b4485.css",
+    "main.js": "/ouroscopo/static/js/main.385379f7.js",
     "static/js/787.adfcc5e3.chunk.js": "/ouroscopo/static/js/787.adfcc5e3.chunk.js",
     "index.html": "/ouroscopo/index.html",
-    "main.cbc97862.css.map": "/ouroscopo/static/css/main.cbc97862.css.map",
-    "main.2a3521bc.js.map": "/ouroscopo/static/js/main.2a3521bc.js.map",
+    "main.eb9b4485.css.map": "/ouroscopo/static/css/main.eb9b4485.css.map",
+    "main.385379f7.js.map": "/ouroscopo/static/js/main.385379f7.js.map",
     "787.adfcc5e3.chunk.js.map": "/ouroscopo/static/js/787.adfcc5e3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cbc97862.css",
-    "static/js/main.2a3521bc.js"
+    "static/css/main.eb9b4485.css",
+    "static/js/main.385379f7.js"
   ]
 }
