@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.cbc97862.css",
-    "main.js": "/static/js/main.49cbcbda.js",
-    "static/js/787.adfcc5e3.chunk.js": "/static/js/787.adfcc5e3.chunk.js",
-    "index.html": "/index.html",
-    "main.cbc97862.css.map": "/static/css/main.cbc97862.css.map",
-    "main.49cbcbda.js.map": "/static/js/main.49cbcbda.js.map",
-    "787.adfcc5e3.chunk.js.map": "/static/js/787.adfcc5e3.chunk.js.map"
+    "main.css": "/ouroscopo/static/css/main.cbc97862.css",
+    "main.js": "/ouroscopo/static/js/main.2a3521bc.js",
+    "static/js/787.adfcc5e3.chunk.js": "/ouroscopo/static/js/787.adfcc5e3.chunk.js",
+    "index.html": "/ouroscopo/index.html",
+    "main.cbc97862.css.map": "/ouroscopo/static/css/main.cbc97862.css.map",
+    "main.2a3521bc.js.map": "/ouroscopo/static/js/main.2a3521bc.js.map",
+    "787.adfcc5e3.chunk.js.map": "/ouroscopo/static/js/787.adfcc5e3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cbc97862.css",
-    "static/js/main.49cbcbda.js"
+    "static/js/main.2a3521bc.js"
   ]
 }
