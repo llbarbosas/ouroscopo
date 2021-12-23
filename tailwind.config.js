@@ -7,9 +7,21 @@ module.exports = {
         "holy-purple-dark": "#302664",
         "holy-purple-soft": "#483f82",
         "holy-purple-softer": "#5a5390",
+        "holy-purple-softertext": "#7c75af",
         "holy-purple-bright": "#b6abff",
       },
-      animation: { wiggle: "wiggle 1s ease-in-out infinite" },
+      animation: {
+        show: "showUp 3s ease-in-out infinite",
+      },
+      keyframes: {
+        showUp: {
+          "0%": { opacity: 0, transform: "translate(0, .3em)" },
+          "50%": { opacity: 1, transform: "translate(0, 0)" },
+          "89%": { opacity: 1 },
+          "90%": { opacity: 0.5 },
+          "100%": { opacity: 0 },
+        },
+      },
     },
   },
   plugins: [],

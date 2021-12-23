@@ -1,4 +1,12 @@
 {
+    "frases_carregamento": [
+        "Esperando a boa vontade do Léo", 
+        "Aguardando o Pedro e a Lavine voltarem de sampa",  
+        "Esperando o Vítor terminar de reclamar da Letraço",
+        "Aguardando a Roberta terminar o 197514º livro",
+        "Carregando \"Viagem de Chihiro\" na Netflix para Laura pela 5109723º vez",
+        "Esperando o Lucas responder o WhatsApp"
+    ], 
     "pedras": [
         "transparente", "jade", "branca", "coral", "marrom", "transparente-rosada", "transparente-escura", "preta", "azul-escuro", "azul-claro"
     ],
@@ -52,105 +60,160 @@
             "equivalente_descricao": "Capricórnio? Nunca nem vi"
         },
         "gato": {
-            "descricao": "Lindo e depressivo. Se viver essa vida já tá f*da, imagina as proximas 6",
+            "descricao": "Lindo e depressivo. Se viver essa vida já tá f*da, imagina as próximas 6",
             "pedra": "azul-escuro",
             "equivalente": "leão",
             "equivalente_descricao": "Leão é um bicho superestimado. Dizem que é o rei da selva, mas o bicho nem mora lá"
         },
+        "piranha": {
+            "descricao": "Tenta enganar, mas no fundo a gente te conhece e te aceita como a safada que você é",
+            "pedra": "azul-claro",
+            "equivalente": "virgem",
+            "equivalente_descricao": "Porque piranha também é gente"
+        },
         "piscina": {
             "descricao": "Piscininha bb",
-            "pedra": "azul-claro",
-            "equivalente": "aquário",
-            "equivalente_descricao": ""
-        },
-        "piranha": {
-            "descricao": "Porque piranha também ama",
             "pedra": "",
-            "equivalente": "virgem",
-            "equivalente_descricao": ""
+            "equivalente": "aquário",
+            "equivalente_descricao": "Quem nasceu pra ser aquário nunca vai ser piscininha"
         },
         "truta": {
             "descricao": "",
             "pedra": "",
             "equivalente": "peixes",
-            "equivalente_descricao": "Nem tudo que vive no mar é peixe. Piranha também é gente"
+            "equivalente_descricao": "Nem tudo que vive no mar é peixe"
         }
     },
     "caracteristicas": {
         "atena": [
-            "Esta é uma característica de teste"
+            "Está sempre certa, não importa o quão errada o mundo esteja",
+            "Evita entrar em discussões. Já sabe quem tem a razão",
+            "Tem a humildade de admitir quando o outro está errado",
+            "Está escrevendo uma lista das pessoas mais sábias da história, embora ainda não saiba quem colocar no segundo lugar em diante"
         ],
         "dolar": [
-            "Esta é uma característica de teste"
+            "Sabe próprio valor: caro, muito caro",
+            "Tão incrível que nem parece que é real",
+            "Bem sucedida, fina e dolar"
         ],
         "unicórnio": [
-            "Esta é uma característica de teste"
+            "Quando a vida lhe dá um limão, ela faz uma caipirinha",
+            "Enfrenta as dificuldades da vida com na base da força do ódio",
+            "Ainda que ande pelo vale, não teme poc alguma"
         ],
         "cobra": [
-            "Esta é uma característica de teste"
+            "Sabe sempre o que falar. Fofoca boa tem hora certa",
+            "Age sempre com justiça. Fala mal de todo mundo igualmente",
+            "Astuta, sagaz e precavida. Sabe a fofoca antes de todo mundo"
         ],
         "irmão(ã)-mais-velho(a)": [
-            "Esta é uma característica de teste"
+            "Chatão, mas amado por todos",
+            "Sabe ouvir o que os outros tem a dizer, embora vá decidir fazer as coisas do seu jeito de qualquer forma",
+            "Tem um coração enorme, mas usa a maior parte pra guardar rancor"
         ],
         "fauno": [
-            "Esta é uma característica de teste"
+            "Equilibrado. Reclama das pessoas o mesmo tanto que as apoia",
+            "Ser reclamão é a forma dele de demonstrar que se importa com alguém",
+            "Dispensa a necessidade de inimigos. Diz que te ama, mas te difama como ninguém"
         ],
         "ressaca": [
-            "Esta é uma característica de teste"
+            "Sabe o valor de fazer uma bela cagada",
+            "É aquela pessoa parceira não só pra fazer merda, mas pra te acompanhar no hospital no dia seguinte",
+            "Vive a vida como ninguém. Claro, ninguém é maluco de viver assim"
         ],
         "bode": [
-            "Esta é uma característica de teste"
+            "Gênio incompreendido",
+            "Geralmente tem razão. As pessoas deveriam lhe dar mais ouvidos",
+            "Deveria acreditar mais em karma. Certeza que matou alguém na vida passada e agora tá pagando os pecados"
         ],
         "gato": [
-            "Esta é uma característica de teste"
-        ],
-        "piscina": [
-            "Esta é uma característica de teste"
+            "Só 2021 perdeu 3 das 7 vidas. Esperando o ano novo pra brilhar",
+            "Amável, mas tem tudo pra ser um psicopata",
+            "Tá pra nascer alguém mais ansioso"
         ],
         "piranha": [
-            "Esta é uma característica de teste"
+            "Tem tanto fogo no cu que se algum dia tiver que usar um supositório, ele cozinha antes de entrar em contato com o organismo",
+            "Banca a sonsa, mas é uma puta atriz",
+            "Tem personalidade forte. Autêntica"
+        ],
+        "piscina": [
+            "",
+            "",
+            ""
         ],
         "truta": [
-            "Esta é uma característica de teste"
+            "",
+            "",
+            ""
         ]
     },
     "conselhos": {
         "atena": [
-            "Este é um conselho de teste"
+            "Nem todo mundo é um poço de sabedoria com você. Conviva com esse fato com sabedoria",
+            "As vezes estar certo é melhor que estar em paz",
+            "As vezes o pior de tudo é estar certa",
+            "Descanse. Estar sempre certa cansa"
         ],
         "dolar": [
-            "Este é um conselho de teste"
+            "Viaje sempre que puder, afinal, você não sabe quando vai ser a próxima pandemia",
+            "Cultive hábitos saudáveis. Vá de bicicleta. A gasolina tá quase 10 conto",
+            "Não tenha medo de investir nos seus sonhos, porque amanhã a inflação vai comer todo o seu dinheiro e você vai ser pobre de novo de qualquer jeito",
+            "O sucesso pessoal é atingido através de pequenas oportunidades. Se um daddy gringo aparecer, não pense duas vezes"
         ],
         "unicórnio": [
-            "Este é um conselho de teste"
+            "Nem todo dia será um bom dia. Rivotril tá aí pra isso",
+            "Se as coisas estiverem dando errado, não se desespere. Crie uma personalidade nova na sua cabeça e começe tudo novamente",
+            "Seu dia está sendo maravilhoso? Ótimo! Só não esquece de marcar a consulta no psiquiatra pra rever a dose do remedinho",
+            "Quer ser feliz? Viva a vida como um unicórnio: não exista"
         ],
         "cobra": [
-            "Este é um conselho de teste"
+            "Não se sinta mal ao ter que falar mal de alguém. É melhor que seja você a fazer isso do que outra pessoa",
+            "Empatia é a chave para a fofoca de qualidade. Basta não ter",
+            "Falar mal de amigo é essencial pra qualquer amizade moderna. Essas fofocas são sempre as melhores",
+            "Não deixe de falar mal de alguém hoje. O mundo seria mais justo se todo mundo falar mal de alguém",
+            "Viva sempre de consciência limpa. Não se esqueça de dizer \"mas quem sou eu pra julgar\" ao final de cada fofoca"
         ],
         "irmão(ã)-mais-velho(a)": [
-            "Este é um conselho de teste"
+            "Tudo tem seu tempo. Saiba resolver seus problemas com calma. Amarre-os ao poste mais próximo e tenha paciência",
+            "Saiba o momento certo de agir. As vezes, a porrada é a forma mais eficiente de resolver um conflito",
+            "Tenha paciência com seus pais, afinal, eles erraram tudo que podiam com você pra serem quem são hoje",
+            "Saiba priorizar as coisas. Traumas familiares são sempre melhores e mais duradouros"
         ],
         "fauno": [
-            "Este é um conselho de teste"
+            "Você nem sempre vai agradar todo mundo. Se nem Cristo agradou, imagina você, que é um porre as vezes",
+            "Ser gentil é bom, mas dar umas diretas disfarçadas de brincadeira é essencial",
+            "Quem seria você hoje sem as patadas que a vida te deu? Não deixe de manter o ciclo. Faça isso pelo seu próximo também",
+            "Ser ranzinza é o segredo para uma vida de qualidade. Se você já viver constantemente de mal humor, nada poderá tirar alguma felicidade de você"
         ],
         "ressaca": [
-            "Siga seu sonho. Continue dormindo"
+            "Siga sempre seus sonhos. Continue dormindo",
+            "O erro leva ao aprendizado. Erre muito",
+            "Pense bastante ao tomar uma decisão. Sempre existirá uma forma de fazer mais merda do que a que você já está cogitando",
+            "Existem 3 \"eu\"s: o eu de hoje, o eu de ontem e o eu do futuro. Pensar dessa forma ajuda a dormir com tranquilidade, afinal, não é você que vai lidar com as merdas que você faz hoje, e sim o seu eu do futuro"
         ],
         "bode": [
-            "Este é um conselho de teste"
+            "Alguém tem que pagar por todos os vacilos da humanidade, e parece que o escolhido foi você",
+            "Dizer \"tá bom, você está certo\" é sempre a maneira mais rápida de acabar uma discussão",
+            "Se você for sempre o errado da situação, seus acertos serão mais notáveis",
+            "Pense: se Deus escreve o certo por linhas tortas, ele deve ter um certo muito grande pra tua vida, porque o tanto de linha torta que tem aí só Deus sabe"
         ],
         "gato": [
-            "Este é um conselho de teste"
-        ],
-        "piscina": [
-            "Este é um conselho de teste"
+            "Lembre-se: há beleza em tudo, mesmo que nem sempre seja tão fácil achar como é em você",
+            "Entenda a importância não só da beleza externa quanto da interna. Se você for belo por fora, fica mais fácil esconder o caco que você tá por dentro",
+            "Ter uma boa base é essêncial viver. Afinal, só com muito reboco pra esconder essa olheira funda na tua cara de quem não dorme a 3 dias",
+            "Quem disse que \"um rostinho bonito não coloca pão na mesa\" certamente não tinha um rostinho bonito. Não esqueça de pedir biscoito no Insta hoje"
         ],
         "piranha": [
-            "Em poço que tem piranha, macaco toma água de canudinho", 
-            "Seja piranha, mas não esqueça dos estudos. Seja uma piranha formada"
+            "Em poço que tem piranha, macaco toma água de canudinho. Não sei o que significa, mas fica a dica", 
+            "Saiba a hora de cortar os vínculos, mas saiba também a hora de amarrar a cremosa",
+            "Equilíbrio na vida é tudo. Seja uma piranha apaixonada",
+            "Saiba se colocar no lugar dos outros. Nem todo mundo é uma gostosa como você"
+        ],
+        "piscina": [
+            ""
         ],
         "truta": [
-            "Este é um conselho de teste"
+            ""
         ]      
     }
 }

@@ -18,6 +18,15 @@ const getRandomQuality = (sign) =>
   ouroscopoData.caracteristicas[sign][
     randomIntBetween(0, ouroscopoData.caracteristicas[sign].length - 1)
   ];
+const getRandomLoadingText = (lastText) => {
+  const random = randomIntBetween(
+    0,
+    ouroscopoData.frases_carregamento.length - 1
+  );
+  const randomText = ouroscopoData.frases_carregamento[random];
+
+  return randomText === lastText ? getRandomLoadingText(lastText) : randomText;
+};
 const getSignInfo = (sign, info) => ouroscopoData.signos[sign][info];
 
 function Select(props) {
@@ -97,21 +106,27 @@ function Sign({
   signDescription,
   equivalentSign,
   equivalentSignDescription,
+  children,
+  ...props
 }) {
   return (
-    <div className="bg-holy-purple-dark rounded-xl pt-3 mb-5">
+    <div
+      {...props}
+      className="bg-holy-purple-dark rounded-xl pt-3 mb-5 relative"
+    >
       <span className="mx-5 text-holy-purple-softer">{description}</span>
       <div className="bg-holy-purple-soft rounded-xl p-5 mt-3">
         <div>
           <h3 className="text-2xl font-bold inline">{capitalize(sign)}</h3>
-          <span className="line-through ml-2 text-holy-purple-softer">
+          <span className="line-through ml-2 text-holy-purple-softertext">
             {capitalize(equivalentSign)}
           </span>
         </div>
-        <span className="block italic text-sm font-light">
-          {capitalize(equivalentSignDescription)}
+        <span className="block italic text-sm font-light text-holy-purple-softertext">
+          "{capitalize(equivalentSignDescription)}"
         </span>
         <p className="mt-3">{signDescription}</p>
+        {children}
       </div>
     </div>
   );
@@ -142,12 +157,39 @@ function DefaultButton({ ...props }) {
   );
 }
 
+function LoadingPage({ onFinishLoad }) {
+  const [loadingText, setLoadingText] = useState(getRandomLoadingText());
+
+  useEffect(() => {
+    setTimeout(() => {
+      onFinishLoad();
+    }, 10000);
+  }, [onFinishLoad]);
+
+  useEffect(() => {
+    const getCurrentLoadingText = () => loadingText;
+    const loadingTextInterval = setInterval(() => {
+      setLoadingText(getRandomLoadingText(getCurrentLoadingText()));
+
+      return () => clearInterval(loadingTextInterval);
+    }, 3000);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  return (
+    <div className="flex justify-center items-center w-full h-32">
+      <span className="animate-show text-center">{loadingText}</span>
+    </div>
+  );
+}
+
 function ShowSignInfoPage({ signRock, ascendantRock }) {
   const sign = getSignByRock(signRock);
   const ascendant = getSignByRock(ascendantRock);
   const [shareActionError, setShareActionError] = useState(false);
   const [randomWisdom, setRandomWisdom] = useState("");
   const [randomQuality, setRandomQuality] = useState("");
+  const [currentShareButton, setCurrentShareButton] = useState(null);
 
   const undoOuroscopo = () => {
     localStorage.clear();
@@ -160,31 +202,30 @@ function ShowSignInfoPage({ signRock, ascendantRock }) {
   }, [sign, ascendant]);
 
   useEffect(() => {
-    const shareButton = document.getElementById("share-button");
-
-    if (shareActionError && shareButton) {
-      shareButton.classList.add("bg-red-700", "animate-bounce");
+    if (shareActionError && currentShareButton) {
+      currentShareButton.classList.add("bg-red-700", "animate-bounce");
 
       setTimeout(() => {
-        shareButton.classList.remove("bg-red-700", "animate-bounce");
+        currentShareButton.classList.remove("bg-red-700", "animate-bounce");
         setShareActionError(false);
       }, 2000);
     }
-  }, [shareActionError]);
+  }, [shareActionError, currentShareButton]);
 
-  const shareAction = () => {
-    const wisdomNode = document.getElementById("wisdom");
-    const shareButton = document.getElementById("share-button");
+  const shareAction = (elementId, buttonId, imageName) => () => {
+    const shareNode = document.getElementById(elementId);
+    const shareButton = document.getElementById(buttonId);
+    setCurrentShareButton(shareButton);
 
     shareButton.style.opacity = "0";
 
     setTimeout(
       () =>
-        toPng(wisdomNode)
+        toPng(shareNode)
           .then(async (dataUrl) => {
             const blob = await (await fetch(dataUrl)).blob();
             const filesArray = [
-              new File([blob], "conselho.png", {
+              new File([blob], `${imageName}.png`, {
                 type: blob.type,
                 lastModified: new Date().getTime(),
               }),
@@ -205,13 +246,23 @@ function ShowSignInfoPage({ signRock, ascendantRock }) {
         Seu Ouroscopo
       </h1>
       <Sign
+        id="sign-card"
         description="Seu signo"
         sign={sign}
         signDescription={getSignInfo(sign, "descricao")}
         equivalentSign={getSignInfo(sign, "equivalente")}
         equivalentSignDescription={getSignInfo(sign, "equivalente_descricao")}
-      />
+      >
+        <DefaultButton
+          id="share-sign-button"
+          onClick={shareAction("sign-card", "share-sign-button", "signo")}
+          className="absolute -right-3 -bottom-5 p-3"
+        >
+          <ShareIcon height="18px" width="18px" />
+        </DefaultButton>
+      </Sign>
       <Sign
+        id="ascendant-card"
         description="Seu ascendente"
         sign={ascendant}
         signDescription={getSignInfo(ascendant, "descricao")}
@@ -220,12 +271,48 @@ function ShowSignInfoPage({ signRock, ascendantRock }) {
           ascendant,
           "equivalente_descricao"
         )}
-      />
-      <Wisdom description="Característica" text={randomQuality} />
-      <Wisdom id="wisdom" description="Conselho para o dia" text={randomWisdom}>
+      >
         <DefaultButton
-          id="share-button"
-          onClick={shareAction}
+          id="share-ascendant-button"
+          onClick={shareAction(
+            "ascendant-card",
+            "share-ascendant-button",
+            "ascendente"
+          )}
+          className="absolute -right-3 -bottom-5 p-3"
+        >
+          <ShareIcon height="18px" width="18px" />
+        </DefaultButton>
+      </Sign>
+      <Wisdom
+        id="quality-card"
+        description="Característica"
+        text={randomQuality}
+      >
+        <DefaultButton
+          id="share-quality-button"
+          onClick={shareAction(
+            "quality-card",
+            "share-quality-button",
+            "caracteristica"
+          )}
+          className="absolute -right-3 -bottom-5 p-3"
+        >
+          <ShareIcon height="18px" width="18px" />
+        </DefaultButton>
+      </Wisdom>
+      <Wisdom
+        id="wisdom-card"
+        description="Conselho para 2022"
+        text={randomWisdom}
+      >
+        <DefaultButton
+          id="share-wisdom-button"
+          onClick={shareAction(
+            "wisdom-card",
+            "share-wisdom-button",
+            "conselho-do-dia"
+          )}
           className="absolute -right-3 -bottom-5 p-3"
         >
           <ShareIcon height="18px" width="18px" />
@@ -257,8 +344,8 @@ function ShareIcon(props) {
 }
 
 function App() {
-  const [signRock, setSignRock] = useState("");
-  const [ascendantRock, setAscendantRock] = useState("");
+  const [signRock, setSignRock] = useState(ouroscopoData.pedras[0]);
+  const [ascendantRock, setAscendantRock] = useState(ouroscopoData.pedras[0]);
   const [currentPage, setCurrentPage] = useState("selectRocks");
 
   useEffect(() => {
@@ -275,8 +362,10 @@ function App() {
   const onSubmitRocks = () => {
     localStorage.setItem("sign", getSignByRock(signRock));
     localStorage.setItem("ascendant", getSignByRock(ascendantRock));
-    setCurrentPage("showSignInfo");
+    setCurrentPage("loading");
   };
+
+  const onFinishLoad = () => setCurrentPage("showSignInfo");
 
   const pages = {
     selectRocks: (
@@ -291,6 +380,7 @@ function App() {
     showSignInfo: (
       <ShowSignInfoPage signRock={signRock} ascendantRock={ascendantRock} />
     ),
+    loading: <LoadingPage onFinishLoad={onFinishLoad} />,
   };
 
   return (
