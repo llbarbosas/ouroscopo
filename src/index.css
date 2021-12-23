@@ -4,9 +4,12 @@
 
 body {
   color: white;
-  background-color: #362d76;
   margin: 0;
   font-family: "Nunito", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  background-color: #362d76;
 }
