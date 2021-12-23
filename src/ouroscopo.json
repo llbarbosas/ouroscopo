@@ -1,0 +1,156 @@
+{
+    "pedras": [
+        "transparente", "jade", "branca", "coral", "marrom", "transparente-rosada", "transparente-escura", "preta", "azul-escuro", "azul-claro"
+    ],
+    "signos": {
+        "atena": {
+            "descricao": "Nada como desfrutar a paz de estar certa do alto da minha sensatez",
+            "pedra": "transparente",
+            "equivalente": "aries",
+            "equivalente_descricao": "Ares era mó otário, só queria tretar"
+        },
+        "dolar": {
+            "descricao": "Rica e desejada",
+            "pedra": "jade",
+            "equivalente": "libra",
+            "equivalente_descricao": "Libra é coisa de europeu chato"
+        },
+        "unicórnio": {
+            "descricao": "Se for pra ter chifre, que seja colorido",
+            "pedra": "branca",
+            "equivalente": "touro",
+            "equivalente_descricao": "Touro me lembra gado, eca"
+        },
+        "cobra": {
+            "descricao": "Falo \"mas quem sou eu pra julgar\" depois de ter falado mal horrores de alguém",
+            "pedra": "coral",
+            "equivalente": "escorpião",
+            "equivalente_descricao": "Escorpião é um bicho muito na dele. Eu quero mais é causar"
+        },
+        "irmão(ã)-mais-velho(a)": {
+            "descricao": "Tiozão do rolê. Gosta de dar esporro, mas faz merda pra caramba também",
+            "pedra": "marrom",
+            "equivalente": "gêmeos",
+            "equivalente_descricao": "Gêmeos? Coisa de família rica privilegiada. Certeza"
+        },
+        "fauno": {
+            "descricao": "Amigo pra todas as horas, apesar das patadas de vez em quando",
+            "pedra": "transparente-rosada",
+            "equivalente": "sagitário",
+            "equivalente_descricao": "Sei lá, sempre achei o fauno das crônicas de Narnia daora"
+        },
+        "ressaca": {
+            "descricao": "Adepto da fisolofia \"o negócio é curtir a vida hoje. Amanhã a gente vê os B.Os\"",
+            "pedra": "transparente-escura",
+            "equivalente": "câncer",
+            "equivalente_descricao": "Cruzes. Quem inventou de colocar nome de doença na brincadeira?"
+        },
+        "bode": {
+            "descricao": "Leva sempre a culpa do rolê",
+            "pedra": "preta",
+            "equivalente": "capricórnio",
+            "equivalente_descricao": "Capricórnio? Nunca nem vi"
+        },
+        "gato": {
+            "descricao": "Lindo e depressivo. Se viver essa vida já tá f*da, imagina as proximas 6",
+            "pedra": "azul-escuro",
+            "equivalente": "leão",
+            "equivalente_descricao": "Leão é um bicho superestimado. Dizem que é o rei da selva, mas o bicho nem mora lá"
+        },
+        "piscina": {
+            "descricao": "Piscininha bb",
+            "pedra": "azul-claro",
+            "equivalente": "aquário",
+            "equivalente_descricao": ""
+        },
+        "piranha": {
+            "descricao": "Porque piranha também ama",
+            "pedra": "",
+            "equivalente": "virgem",
+            "equivalente_descricao": ""
+        },
+        "truta": {
+            "descricao": "",
+            "pedra": "",
+            "equivalente": "peixes",
+            "equivalente_descricao": "Nem tudo que vive no mar é peixe. Piranha também é gente"
+        }
+    },
+    "caracteristicas": {
+        "atena": [
+            "Esta é uma característica de teste"
+        ],
+        "dolar": [
+            "Esta é uma característica de teste"
+        ],
+        "unicórnio": [
+            "Esta é uma característica de teste"
+        ],
+        "cobra": [
+            "Esta é uma característica de teste"
+        ],
+        "irmão(ã)-mais-velho(a)": [
+            "Esta é uma característica de teste"
+        ],
+        "fauno": [
+            "Esta é uma característica de teste"
+        ],
+        "ressaca": [
+            "Esta é uma característica de teste"
+        ],
+        "bode": [
+            "Esta é uma característica de teste"
+        ],
+        "gato": [
+            "Esta é uma característica de teste"
+        ],
+        "piscina": [
+            "Esta é uma característica de teste"
+        ],
+        "piranha": [
+            "Esta é uma característica de teste"
+        ],
+        "truta": [
+            "Esta é uma característica de teste"
+        ]
+    },
+    "conselhos": {
+        "atena": [
+            "Este é um conselho de teste"
+        ],
+        "dolar": [
+            "Este é um conselho de teste"
+        ],
+        "unicórnio": [
+            "Este é um conselho de teste"
+        ],
+        "cobra": [
+            "Este é um conselho de teste"
+        ],
+        "irmão(ã)-mais-velho(a)": [
+            "Este é um conselho de teste"
+        ],
+        "fauno": [
+            "Este é um conselho de teste"
+        ],
+        "ressaca": [
+            "Siga seu sonho. Continue dormindo"
+        ],
+        "bode": [
+            "Este é um conselho de teste"
+        ],
+        "gato": [
+            "Este é um conselho de teste"
+        ],
+        "piscina": [
+            "Este é um conselho de teste"
+        ],
+        "piranha": [
+            "Em poço que tem piranha, macaco toma água de canudinho", 
+            "Seja piranha, mas não esqueça dos estudos. Seja uma piranha formada"
+        ],
+        "truta": [
+            "Este é um conselho de teste"
+        ]      
+    }
+}
